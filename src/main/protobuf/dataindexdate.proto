@@ -1,0 +1,21 @@
+syntax = "proto2"; 
+package org.doogle.dataindexdate; 
+import "kogito-index.proto";
+import "kogito-types.proto";
+option kogito_model = "Dataindexdate";
+option kogito_id = "dataindexdate";
+
+/* @Indexed */ 
+message Dataindexdate { 
+	option java_package = "org.doogle";
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional string abc = 1; 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional kogito.Date dt = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string id = 3; 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */ 
+	optional org.kie.kogito.index.model.KogitoMetadata metadata = 4; 
+}
