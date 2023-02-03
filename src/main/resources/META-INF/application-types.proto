@@ -1,0 +1,29 @@
+syntax = "proto2"; 
+package org.kie.kogito.app; 
+import "kogito-types.proto";
+
+message AL { 
+	option java_package = "org.doogle";
+	optional string al = 1; 
+	optional kogito.Date createdDate = 2; 
+	optional kogito.Date updatedDate = 3; 
+}
+message CntDec { 
+	option java_package = "org.doogle";
+	optional string cntdec = 1; 
+	optional kogito.Date createdDate = 2; 
+	optional kogito.Date updatedDate = 3; 
+}
+message Input { 
+	option java_package = "org.doogle.dataindexdate";
+	optional kogito.Instant ldt = 1; 
+	optional string param = 2; 
+	optional int64 paramA = 3; 
+	optional double paramB = 4; 
+}
+message LC { 
+	option java_package = "org.doogle";
+	optional kogito.Date createdDate = 1; 
+	optional string lc = 2; 
+	optional kogito.Date updatedDate = 3; 
+}

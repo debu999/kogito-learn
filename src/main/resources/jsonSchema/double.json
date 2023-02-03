@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2019-09/schema","type":"object","properties":{"dbl":{"type":"number"},"flt":{"type":"number"},"i":{"type":"integer"},"lng":{"type":"integer"},"z":{"type":"string","format":"date-time"}}}

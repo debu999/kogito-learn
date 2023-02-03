@@ -1,0 +1,30 @@
+syntax = "proto2"; 
+package com.example.double; 
+import "kogito-index.proto";
+import "kogito-types.proto";
+option kogito_model = "Double";
+option kogito_id = "double";
+
+/* @Indexed */ 
+message Double { 
+	option java_package = "com.example";
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional double dbl = 1; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional float flt = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional int32 i = 3; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string id = 4; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional int64 lng = 5; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional kogito.Date z = 6; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional org.kie.kogito.index.model.KogitoMetadata metadata = 7; 
+}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2019-09/schema","$defs":{"Input":{"type":"object","properties":{"ldt":{"type":"string"},"param":{"type":"string"},"paramA":{"type":"integer"},"paramB":{"type":"number"}}}},"type":"object","properties":{"abc":{"type":"string"},"dt":{"type":"string","format":"date-time"},"input":{"$ref":"#/$defs/Input"}}}
