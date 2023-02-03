@@ -1,0 +1,60 @@
+syntax = "proto2"; 
+package com.example.duplicate; 
+import "kogito-index.proto";
+import "kogito-types.proto";
+option kogito_model = "Duplicate";
+option kogito_id = "duplicate";
+
+/* @Indexed */ 
+message AL { 
+	option java_package = "org.doogle";
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string al = 1; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date createdDate = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date updatedDate = 3; 
+}
+/* @Indexed */ 
+message CntDec { 
+	option java_package = "org.doogle";
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string cntdec = 1; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date createdDate = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date updatedDate = 3; 
+}
+/* @Indexed */ 
+message Duplicate { 
+	option java_package = "com.example";
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional AL al = 1; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional CntDec cd = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional kogito.Date createdDate = 3; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string id = 4; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional LC lc = 5; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional kogito.Date updatedDate = 6; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional org.kie.kogito.index.model.KogitoMetadata metadata = 7; 
+}
+/* @Indexed */ 
+message LC { 
+	option java_package = "org.doogle";
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date createdDate = 1; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional string lc = 2; 
+	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	optional kogito.Date updatedDate = 3; 
+}
