@@ -8,29 +8,29 @@ option kogito_id = "dataindexdate";
 /* @Indexed */ 
 message Dataindexdate { 
 	option java_package = "org.doogle";
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField
  @VariableInfo(tags="") */ 
 	optional string abc = 1; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField
  @VariableInfo(tags="") */ 
 	optional kogito.Date dt = 2; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional string id = 3; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField
  @VariableInfo(tags="") */ 
 	optional Input input = 4; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional org.kie.kogito.index.model.KogitoMetadata metadata = 5; 
 }
 /* @Indexed */ 
 message Input { 
 	option java_package = "org.doogle.dataindexdate";
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional kogito.Instant ldt = 1; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional string param = 2; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional int64 paramA = 3; 
-	/* @Field(index = Index.YES, store = Store.YES) @SortableField */ 
+	/* @Field(index = Index.NO, store = Store.YES) @SortableField */
 	optional double paramB = 4; 
 }
